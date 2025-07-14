@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ну, это типа сайт...{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на этот типа сайт!</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Здесь типа главное</a></li>
+                <li><a href="/about">Здесь об этом типа сайте</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <p>Здесь будет типа контент.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025-й год. Типа сайт...</p>
+    </footer>
+</body>
+</html>
